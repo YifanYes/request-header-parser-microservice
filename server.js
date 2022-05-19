@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/whoami", (req, res) => {
   res.json({
-    ipaddress: req.clientIp,
+    ipaddress: req.ip,
     language: req.acceptsLanguages()[0],
     software: req.get('User-Agent')
   });
